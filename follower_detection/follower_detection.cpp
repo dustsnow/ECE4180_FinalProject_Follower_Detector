@@ -98,6 +98,7 @@ bool Cfollower_detectionApp::Cfollower_detectionApp_start()
 	if(!cap.isOpened())
     {
 		this->err_msg = "Cannot open camera";
+		this->err_code = ERR_CAMERA_FAIL;
 		return false;
 	}
 	while(1){
@@ -105,6 +106,7 @@ bool Cfollower_detectionApp::Cfollower_detectionApp_start()
 		cap >> frame;
 		if(!frame.data){
             this->err_msg = "frame capture error";
+			this->err_code = ERR_CAPTURE_FAIL;
         }
 		cvtColor(frame, img_hsv, CV_BGR2HSV);
 

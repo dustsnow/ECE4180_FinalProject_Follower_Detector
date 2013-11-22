@@ -11,6 +11,8 @@
 #include <string>
 
 #define ERR_PERSON_LOST 1
+#define ERR_CAMERA_FAIL 2
+#define ERR_CAPTURE_FAIL 3
 // Cfollower_detectionApp
 // See follower_detection.cpp for the implementation of this class
 //
